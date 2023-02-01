@@ -1,0 +1,22 @@
+<mat-card>
+    <div id="header">
+        <img src="/assets/imgs/pixelgram-logo.svg" alt="pixelgram" id="logo">
+        <span id="pipe"></span>
+        <span id="text">Register</span>
+    </div>
+
+    <form id="registrationForm" [formGroup]="registrationForm">
+        <div>
+            <input type="text" name="username" id="username" placeholder="Username" formControlName="username">
+            <p id="usernameError" [ngClass]="usernameIsEmpty ? '' : 'transparent'">* Username is required</p>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" placeholder="Password" formControlName="password">
+            <p id="passwordError" [ngClass]="passwordIsEmpty ? '' : 'transparent'">* Password is required</p>
+        </div>
+        <p id="invalidUsername" [ngClass]="invalidUsername ? '' : 'transparent'">* Username already exists</p>
+        <div id="submit">
+            <button type="submit" (click)="register()">Register</button>
+        </div>
+    </form>
+</mat-card>

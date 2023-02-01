@@ -1,0 +1,26 @@
+<div *ngIf="user && user.profileImg; else elseBlock" class="post-heading">
+    <div class="userProfile">
+        <img [src]="user.profileImg" class="profilePic" alt="unavailable"> <span class="username">{{user.username}}</span>
+    </div>
+    <div *ngIf="user.id.toString() == currentUser" class="delete-button" (mouseenter)="toggleDelete($event)">
+        <mat-icon>more_horiz</mat-icon>
+        <div class="pop-up" [ngClass]="showPopup ? '' : 'hidden'" (mouseleave)="toggleDelete($event)">
+            Delete Post
+        </div>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+    <div class="post-heading">
+        <div class="userProfile">
+            <span class="profilePic"> </span> <span class="username">{{user.username}}</span>
+        </div>
+        <div *ngIf="user.id.toString() == currentUser" class="delete-button" (mouseenter)="toggleDelete($event)">
+            <mat-icon>more_horiz</mat-icon>
+            <div class="pop-up" (mouseleave)="toggleDelete($event)" [ngClass]="showPopup ? '' : 'hidden'">
+                Delete Post
+            </div>
+        </div>
+
+    </div>
+</ng-template>

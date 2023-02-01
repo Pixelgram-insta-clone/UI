@@ -1,0 +1,27 @@
+<mat-card>
+  <div id="header">
+    <img src="/assets/imgs/pixelgram-logo.svg" alt="pixelgram" id="logo" />
+    <span id="pipe"></span>
+    <span id="text">Create Post</span>
+  </div>
+
+  <form id="PostForm" [formGroup]="postForm"> 
+        <div class="upload-cont">
+            <button (click)="fileUpload.click()">
+                Choose Image
+            </button>
+                <input #fileUpload (change)="displayFileName($event)" type="file" name="image" id="image" formControlName="img" accept="image/*">
+                
+                <p class="file-name">{{fileName}}</p>
+        </div>
+        
+
+      <p [ngClass]="imageError ? '' : 'transparent'" class="error-message">* Image is required</p>
+      <textarea rows="8" cols="82" placeholder="Description..." formControlName="description" name="description" id="description"></textarea>
+      <p [ngClass]="descriptionError ? '' : 'transparent'" class="error-message"class="error-message">* Description is required</p>
+      <div class="button-container">
+        <button id="cancel-btn" (click)="rerouteHomePage()">Cancel</button>
+        <button type="submit" id="create-post" (click)="createPost()">Create Post</button>
+      </div>
+  </form>
+</mat-card>

@@ -1,0 +1,105 @@
+mat-card {
+    text-align: center;
+    margin: 100px auto;
+    width: 43%;
+    min-width: 400px;
+    max-width: 700px;
+    height: 490px;
+}
+
+#header {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50.32%;
+    right: 34.25%;
+    top: 11.53%;
+    bottom: 81.01%;
+    margin: 40px 0 70px 0;
+}
+
+#pipe {
+    margin: 0 25px;
+    width: 1px;
+    height: 45px;
+    background-color: black;
+}
+
+#logo {
+    width: 50px;
+}
+
+#header>#text {
+    font-family: 'Billabong', Sans-serif;
+    padding-top: 5px;
+    vertical-align: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 100%;
+    /* or 45px */
+    letter-spacing: 0.025em;
+    color: #262626;
+}
+
+input {
+    padding: 20px;
+    width: 90%;
+    height: 57px;
+    box-sizing: border-box;
+    background: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+
+::placeholder {
+    color: #DBDBDB;
+}
+
+form>div {
+    margin: 10px;
+}
+
+p {
+    text-align: left;
+    margin: 8px 0 20px 5%;
+    font-family: 'Roboto', Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    /* identical to box height, or 15px */
+    letter-spacing: 0.025em;
+    color: #CB5B5B;
+}
+
+.transparent {
+    visibility: hidden;
+}
+
+#submit {
+    float: right;
+    margin-right: 8%;
+    margin-top: 0;
+}
+
+button {
+    background: #5197E9;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    margin-left: 30px;
+}
+
+button:hover {
+    background-color: #80b5f1;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    mat-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,5 @@
+<div class="infinite-scroll" infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()">
+    <ng-container *ngFor="let post of postsArray">
+        <app-post [post]="post"></app-post>
+    </ng-container>
+</div>

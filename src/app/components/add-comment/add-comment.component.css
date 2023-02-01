@@ -1,0 +1,72 @@
+* {
+  font-family: Roboto, sans-serif;
+}
+
+
+
+.add-comments-button {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ABABAB;
+}
+
+
+.add-comments-button:hover, .add-comments-btn:hover{
+    cursor: pointer;
+}
+
+.add-comment-input{
+  height: 100%;
+  width: calc(100% - 46px);
+  padding:0 8px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.comment-form{
+  position: relative;
+  padding: 5px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAFAFA;
+  outline: none;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.transparent {
+    display: none;
+}
+
+.add-comment-btn{
+  display: flex;
+  align-items: center;
+  margin-right: -2px;
+  cursor: pointer;
+  height: 100%;
+  border:none;
+  background: none;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+
+}
+
+.add-comments-button image{
+  width: 30px;
+  height: 30px;
+}
+
+::placeholder{
+  color: #DBDBDB;
+}

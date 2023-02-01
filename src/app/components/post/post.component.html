@@ -1,0 +1,38 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="post-container">
+    <mat-card class="post-card">
+        <app-user [user]="post.user"></app-user>
+        <div class="image-container">
+            <img mat-card-image class="post-card-image" [src]="post.img" alt="">
+        </div>
+        <mat-card-content>
+            <div>
+                <div class="likes-container">
+                    <mat-icon>favorite_border</mat-icon>
+                    <span>12 likes</span>
+                    <span *ngIf="commentCount == 1" class="comment-count"> {{commentCount}} comment</span>
+                    <span *ngIf="commentCount > 1" class="comment-count"> {{commentCount}} comments</span>
+                </div>
+                <span class="post-username">
+                    {{postUsername}}
+                </span>
+                <span *ngIf="post.description.length > 80; else elseBlock">
+                    {{(post.description | slice:0:descSlice) + ellipses}}
+                    <button class="more-button" (click)="toggleDesc()">
+                        {{moreButton}}
+                    </button>
+                </span>
+                <ng-template #elseBlock>
+                    {{post.description}}
+                </ng-template>
+            </div>
+            <div class="comment-container">
+                <p class="comments-button" [ngClass]="hasMoreComments ? '' : 'transparent'" (click)="getComments()">View more comments</p>
+                <div *ngFor="let comment of commentsArray" class="comment-content">
+                    <app-comment [comment]="comment"></app-comment>
+                </div>
+            </div>
+            <app-add-comment [post]="post" (commentsArrayChange)="addComment($event)"></app-add-comment>
+        </mat-card-content>
+    </mat-card>
+</div>

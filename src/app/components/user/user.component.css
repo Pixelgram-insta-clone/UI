@@ -1,0 +1,71 @@
+.profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 11px;
+    margin-bottom: 9px;
+    margin-left: 14px;
+    margin-right: 11px;
+    background-color: #C4C4C4;
+    display: inline-block;
+}
+
+.post-heading {
+    width: calc(100% + 16px);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 0px -8px;
+    margin-top: -8px;
+    justify-content: space-between;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    color: #262626;
+}
+
+.delete-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8px;
+    padding: 0 4px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.delete-button:hover {
+    background-color: #8F8F8F30;
+    cursor: pointer;
+}
+
+.pop-up {
+    z-index: 1000;
+    background-color: white;
+    width: max-content;
+    padding: 8px;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 400px;
+}
+
+.hidden {
+    display: none;
+}

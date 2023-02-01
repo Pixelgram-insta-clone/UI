@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background: #FAFAFA;
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Billabong";
+    src: local("Billabong"), url(/assets/FontsFree-Net-Billabong.ttf) format("truetype");
+}
+
+mat-card {
+    box-shadow: none !important;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px !important;
+}

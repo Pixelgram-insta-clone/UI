@@ -1,0 +1,21 @@
+<div class = "add-comment-container" [ngClass]="isLoggedIn() ? 'visibility' : 'transparent'">
+    <span [hidden]="clicked">
+        <button
+            class="add-comments-button" (click)="removeButton()">
+            Add a comment...
+        </button>
+    </span>
+
+    <form id="commentForm" [formGroup]="commentForm">
+        <span [hidden]="!clicked">     
+            <div class = "comment-form">      
+                <input #commentInput class="add-comment-input" type="text"   
+                    placeholder="Add a comment..." formControlName="body">
+                <button (click)="submitComment()" type = "submit" class="add-comment-btn" 
+                    alt="submitComment" ><img src = "/assets/imgs/comment-submit.png" alt = "no img"></button>
+            </div>
+            </span>
+    </form>  
+</div>
+
+

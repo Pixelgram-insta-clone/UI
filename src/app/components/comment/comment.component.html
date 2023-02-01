@@ -1,0 +1,18 @@
+  <div class="comment-container">
+    <span class="comment-username">
+        {{comment.username}}
+    </span>
+    <span class="comment" *ngIf="comment.body.length > 100; else elseBlock">
+        {{(comment.body | slice:0:commentSlice) + ellipses}}
+        <button class="more-button" (click)="toggleComment()">
+           {{moreButton}}
+        </button>
+    </span>
+    <ng-template #elseBlock>
+      <span class="comment">
+        {{comment.body}}
+      </span>
+    </ng-template>
+  </div>
+
+

@@ -1,0 +1,157 @@
+mat-card {
+    text-align: center;
+    margin: 100px auto;
+    width: 43%;
+    min-width: 400px;
+    max-width: 700px;
+    height: 550px;
+}
+
+#header {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50.32%;
+    right: 34.25%;
+    top: 11.53%;
+    bottom: 81.01%;
+    margin: 40px 0 70px 0;
+}
+
+#pipe {
+    margin: 0 25px;
+    width: 1px;
+    height: 45px;
+    background-color: black;
+}
+
+#logo {
+    width: 50px;
+}
+
+#header>#text {
+    font-family: 'Billabong', Sans-serif;
+    padding-top: 5px;
+    vertical-align: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 100%;
+    /* or 45px */
+    letter-spacing: 0.025em;
+    color: #262626;
+}
+
+#PostForm {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button {
+    background: #5197E9;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    display: flex;
+    padding: 17px 30px;
+    font-family: 'Roboto', Sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    margin-right: 4px;
+
+}
+
+button:hover {
+    background-color: #80b5f1;
+    cursor: pointer;
+}
+
+#image{
+    display: none;
+}
+.file-name {
+    align-self: flex-end;
+    font-family: 'Roboto', Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.upload-cont {
+    display: flex;
+}
+
+textarea {
+    margin-top: 35px;
+    padding: 15px;
+    display: flex;
+    resize: none;
+    background-color: #FAFAFA;
+    outline: none;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    font-family: 'Roboto', Sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    height: auto;
+    overflow: hidden;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    margin-top: 10px;
+    color: #E6E6E6;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #E6E6E6;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #E6E6E6;
+  }
+
+  .error-message {
+    margin-top: 10px;
+    color: #CB5B5B;
+    display: flex;
+    
+  }
+
+  #cancel-btn {
+      background-color: #5751E9;
+      display: inline;
+      margin-right: 20px;
+      padding: 17px 0px;
+      width: 156px;
+      text-align: center;
+
+    
+  }
+
+  #cancel-btn:hover {
+    background-color: #3530b7;
+  }
+
+  #create-post{
+      display: inline;
+      padding: 17px 0px;
+      width: 156px;
+      
+    }
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.transparent {
+    visibility: hidden;
+}

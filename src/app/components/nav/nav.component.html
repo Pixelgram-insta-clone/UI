@@ -1,0 +1,29 @@
+<div class="nav-container">
+    <div class="nav-title">
+        <a routerLink="/home">
+
+            <img class="logo" width="30" src="/assets/imgs/pixelgram-logo.svg" alt="logo">
+        </a>
+        <span class="vl"></span>
+        <div routerLink="/home" class="title">Pixelgram</div>
+    </div>
+
+    <div class="nav-search" [ngClass]="atHome ? 'visibility' : 'hidden'">
+        <input class="nav-search-input" type="search" placeholder="&#xF002; Search"/>
+    </div>
+
+    <div class="nav-user" [ngClass]="checkRouterLink() ? 'visibility' : 'hidden'">
+        <button class="nav-buttons">
+            <mat-icon routerLink='/create-post' class="add-post-icon" [ngClass]="loggedIn ? 'visibility' : 'hidden'">add</mat-icon>
+        </button>
+        <button class="nav-buttons" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()">
+            <img src="/assets/imgs/profile_outline.png" alt="logo-img">
+        </button>
+        <mat-menu #menu="matMenu" xPosition='before'>
+            <span class="mat-menu"(mouseleave)="menuTrigger.closeMenu()">
+                <a class="menu-buttons" routerLink="/login" *ngIf="!loggedIn">Login</a>
+                <a class="menu-buttons" *ngIf="loggedIn" (click)="logout()">Logout</a>
+            </span>
+        </mat-menu>
+    </div>
+</div>
